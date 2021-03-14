@@ -1,0 +1,49 @@
+*{
+	    color:FEFEFF;
+}
+body {
+    background: white url("images/img.gif") no-repeat;
+
+}
+ h1{
+	font-size:40px;
+	padding:0;
+	margin:0;
+	
+}
+
+a{
+	text-decoration:none;		
+}
+a:hover{
+	color: #cdd206;
+	text-decoration:underline;		
+}
+h2{
+	font-size:26.67px;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+li{
+	font-size:17.78px;
+}
+input,label{
+	margin-top:5px;
+	padding-top:0;
+}
+.test{
+	width:350px;
+	margin: 10% 0% 0% 38%; 
+	border: 5px solid white;
+	padding:0 20px 20px 20px;
+}
+.votebtn{
+	color:black;
+}
+.votebtn:hover{
+	background-color:#cdd206;
+}
+address{
+	padding-top:15px;
+	text-decoration: underline;
+}

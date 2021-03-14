@@ -1,0 +1,16 @@
+{% load static %}
+<html>
+	<head>	
+		<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+		<title>Polls V.01</title>
+	</head>
+	<body>
+	 	<div class="test">
+		<h1>Questions</h1>
+			{% block content %}
+			{% endblock %}
+			<a href={% url 'polls:index' %}>Go back to index</a>
+			<address>Created by Group 4 Class @ March 14, 2021</address>
+		</div>
+	</body>
+</html>
