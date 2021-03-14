@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
  *{
-	    color:FEFEFF;
+	color:FEFEFF;
+	font-family: 'Poppins', sans-serif;	
 } 
 body {
     background: white url("images/img.gif") no-repeat;
@@ -28,8 +30,8 @@ input,label{
 	margin-top:5px;
 	padding-top:0;
 }
-.test{
-	width:350px;
+.box{
+	width:390px;
 	margin: 10% 0% 0% 38%; 
 	border: 5px solid white;
 	padding:0 20px 20px 20px;
