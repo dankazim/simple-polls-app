@@ -1,6 +1,6 @@
-*{
+ *{
 	    color:FEFEFF;
-}
+} 
 body {
     background: white url("images/img.gif") no-repeat;
 
@@ -15,10 +15,7 @@ body {
 a{
 	text-decoration:none;		
 }
-a:hover{
-	color: #cdd206;
-	text-decoration:underline;		
-}
+
 h2{
 	font-size:26.67px;
 	margin-bottom:0;
@@ -40,10 +37,25 @@ input,label{
 .votebtn{
 	color:black;
 }
-.votebtn:hover{
-	background-color:#cdd206;
+
+button:hover{
+	background-color:rgb(161, 209, 236);
 }
+
 address{
 	padding-top:15px;
 	text-decoration: underline;
+}
+
+.creds{
+	text-align: center;
+}
+.creds a:hover{
+	color: chocolate;
+}
+li:hover,a:hover, label:hover{
+	color:darkcyan;
+}
+.btn{
+	color:black;
 }

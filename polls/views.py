@@ -39,14 +39,14 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
-
-
-
-# def reset(request, question_id):
-    # question = get_object_or_404(Question, pk=question_id)
-    # selected_choice = question.choice_set.all()
-    # selected_choice.save()
-    # return HttpResponseRedirect(reverse('polls:reset', args=(question.id,)))
+def reset(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    selected_choice = question.choice_set.all()
+    for x in selected_choice:
+        x.votes =0
+        x.save()
+    context = {'question': question}
+    return render(request, 'polls/detail.html', context)
 
     
  

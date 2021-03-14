@@ -9,8 +9,12 @@
 		<h1>Questions</h1>
 			{% block content %}
 			{% endblock %}
-			<a href={% url 'polls:index' %}>Go back to index</a>
-			<address>Created by Group 4 Class @ March 14, 2021</address>
+			
+			<div class="creds">
+				<a href={% url 'polls:index' %}>Go back to index</a>
+				<address>Created by Group 4 Class @ March 14, 2021</address>
+			</div>
+			
 		</div>
 	</body>
 </html>
