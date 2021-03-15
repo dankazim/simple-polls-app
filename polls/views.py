@@ -46,7 +46,7 @@ def reset(request, question_id):
         x.votes =0
         x.save()
     context = {'question': question}
-    return render(request, 'polls/detail.html', context)
+    return render(request, 'polls/results.html', context)
 
     
  
