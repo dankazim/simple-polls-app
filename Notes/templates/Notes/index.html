@@ -1,0 +1,17 @@
+{% extends "Notes/page_structure.html" %}
+
+{% block heading1 %} 
+My Notes
+{% endblock %}
+
+{% block mynotes %}
+		 {% if Notes_list %}
+		 <ol>
+			{% for note in Notes_list %}
+				<li class="notes-list"><a href="">{{ note.title }}</a></li>
+		    {% endfor %}
+		</ol>
+        {% else %}
+		    <p>No Notes are available. Would You Like to create one!</p>
+		    {% endif %} 
+{% endblock mynotes %}	
