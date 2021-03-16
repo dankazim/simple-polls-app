@@ -95,3 +95,10 @@ li a:hover{
 padding-bottom: 5px;
 float: right;
 }
+
+.emptyContent{
+  font-size: 17px;
+  line-height: 20px;
+  padding-bottom: 7px;
+
+}

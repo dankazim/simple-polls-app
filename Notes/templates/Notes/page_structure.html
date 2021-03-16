@@ -12,8 +12,9 @@
     <div class="paper">
         <div class="lines">
           <div class="text">
-            <p class="datee">Date here</p>
-            <h1>{% block heading1 %} heading {% endblock %} </h1>
+            
+            <p class="datee">{% block date %} date{% endblock  %}</p>
+            <h1>{% block heading %} heading {% endblock %} </h1>
             {% block mynotes %}
             content
             {% endblock mynotes %}

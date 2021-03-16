@@ -8,10 +8,11 @@ My Notes
 		 {% if Notes_list %}
 		 <ol>
 			{% for note in Notes_list %}
-				<li class="notes-list"><a href="">{{ note.title }}</a></li>
+				<li class="notes-list"><a href="{% url 'Notes:detail' note.id %}">{{ note.title }}</a></li>
+		
 		    {% endfor %}
 		</ol>
         {% else %}
-		    <p>No Notes are available. Would You Like to create one!</p>
+		    <p>My NoteBook is currently empty, Would you like to add new notes!</p>
 		    {% endif %} 
 {% endblock mynotes %}	

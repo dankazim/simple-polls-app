@@ -17,6 +17,12 @@ class IndexView(generic.ListView):
         """Return the last five published questions."""
         return NoteBook.objects.order_by('pub_date')[:5]
 
+
+class DetailView(generic.DetailView):
+    model = NoteBook
+    template_name = 'Notes/detail.html'
+
+
 # def create_note(request):
 #     title = request.POST['title']
 #     plain_note = request.POST['content']

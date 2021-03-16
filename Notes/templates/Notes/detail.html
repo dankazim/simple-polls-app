@@ -1,0 +1,19 @@
+{% extends "Notes/page_structure.html" %}
+
+
+{% block heading %} 
+	{{ notebook.title }}
+{% endblock %}
+
+{% block date %} 
+	{{ notebook.pub_date}}
+{% endblock %}  
+
+{% block mynotes %}
+	{% if notebook %}
+		<p class="notes plain-notes">{{ notebook.plain_note }}</p>
+        {% else %}
+		<p class="emptyContent">The note is currently empty, would you like to add conttent</p>
+		    {% endif %} 
+{% endblock mynotes %}	
+
