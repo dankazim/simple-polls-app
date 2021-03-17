@@ -15,7 +15,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last five published questions."""
-        return NoteBook.objects.order_by('pub_date')[:5]
+        return NoteBook.objects.order_by('-pub_date')
 
 
 class DetailView(generic.DetailView):
