@@ -1,0 +1,18 @@
+{% extends "Notes/page_structure.html" %}
+
+{% block heading %} 
+    Updating {{notebook.title}}
+{% endblock %}
+
+{% block date %} 
+    {% now "M H, Y" %}s
+{% endblock %}  
+
+{% block mynotes %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <input type="submit" value="Saves">
+    </form>
+
+{% endblock mynotes %}

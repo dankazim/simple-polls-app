@@ -17,6 +17,9 @@
 		<p class="notes plain-notes">{{ notebook.plain_note }}</p>
         {% else %}
 		<p class="emptyContent">The note is currently empty, would you like to add conttent</p>
-		    {% endif %} 
+		
+		{% endif %} 
+		<a href="{% url 'Notes:delete' notebook.id %}" class="btn"> Delete Note</a>
+		<a href="{% url 'Notes:update' notebook.id %}" class="btn"> update Note</a>
 {% endblock mynotes %}	
 
