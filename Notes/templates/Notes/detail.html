@@ -1,12 +1,15 @@
 {% extends "Notes/page_structure.html" %}
 
 
+
 {% block heading %} 
 	{{ notebook.title }}
+	<!-- <span style="color: black; font-size: 14px;">&#60; Previous</span>
+	<span style="color: black; font-size: 14px;">Next &#62;</span> -->
 {% endblock %}
 
 {% block date %} 
-	{{ notebook.pub_date}}
+	{{ notebook.pub_date |date:"M d, Y"}}
 {% endblock %}  
 
 {% block mynotes %}

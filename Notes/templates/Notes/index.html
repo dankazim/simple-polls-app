@@ -1,8 +1,14 @@
 {% extends "Notes/page_structure.html" %}
 
-{% block heading1 %} 
-My Notes
+{% block heading %} 
+	My Notes
+	<!-- <span style="color: black; font-size: 14px;">&#60; Previous</span>
+	<span style="color: black; font-size: 14px;">Next &#62;</span> -->
 {% endblock %}
+
+{% block date %} 
+	{% now "F jS, Y -- H:i" %}
+{% endblock %}  
 
 {% block mynotes %}
 		 {% if Notes_list %}
