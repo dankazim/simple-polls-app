@@ -29,6 +29,7 @@ class DeleteNote(generic.DeleteView):
 
 class UpdateNote(generic.UpdateView):
     model = NoteBook
+<<<<<<< HEAD
     fields =['title','plain_note']
     template_name = 'Notes/notebook_form_update.html'  
     success_url ="/"
@@ -40,3 +41,6 @@ class CreateNote(generic.CreateView):
     success_url ="/"
     
    
+=======
+    success_url ="/"
+>>>>>>> 42e8d32d949e7cb54ac3f85d8b691c39c46f0da0
