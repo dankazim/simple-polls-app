@@ -6,16 +6,13 @@
 body {
   margin: 0;
   padding: 0;
- /*  background: white url("images/img.gif") no-repeat; */
  background-color: rgb(211, 231, 224);
  
 }
 .paper {
-
-
-min-height: 550px;
+  display: table;
+  min-height: 550px;
   position: absolute;
-  
   width: 550px;
   background: rgba(255,255,255,0.9);
   margin: -275px -225px;
@@ -31,12 +28,12 @@ min-height: 550px;
   width: 2px;
   background: rgba(255,0,0,0.4);
 }
-/* .lines {
+/*  .lines {
   margin-top: 40px;
   height: calc(100% - 40px);
   width: 100%;
   background-image: repeating-linear-gradient(white 0px, white 26px, steelblue 27px);
-} */
+}  */
 .text {
   position: absolute;
   top: 42px;
@@ -77,10 +74,21 @@ footer{
 
 h1{
   font-size: 22px;
+  text-align: center;
+}
+
+h1 a{
+  float: left;
+  font-size: 20px;
+  text-decoration:none;
+}
+
+h1 a:hover{
+  text-decoration: underline;
 }
 
 .notes{
-  font-size: 17px;
+  font-size: 14px;
   line-height: 1.5;
 }
 li{
@@ -101,9 +109,11 @@ float: right;
 }
 
 .emptyContent{
-  font-size: 17px;
-  line-height: 20px;
-  padding-bottom: 7px;
+  font-size: 14px;
+  line-height: 1.5;
+/*   padding-bottom: 7px; */
 
 }
+
+
 

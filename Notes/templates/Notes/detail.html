@@ -3,9 +3,8 @@
 
 
 {% block heading %} 
-	{{ notebook.title }}
-	<!-- <span style="color: black; font-size: 14px;">&#60; Previous</span>
-	<span style="color: black; font-size: 14px;">Next &#62;</span> -->
+	
+	<a href={% url 'Notes:index' %} class="go-back">&#60 back</a> {{ notebook.title }} 
 {% endblock %}
 
 {% block date %} 
@@ -14,19 +13,12 @@
 
 {% block mynotes %}
 	{% if notebook %}
-		<p class="notes plain-notes">{{ notebook.plain_note }}</p>
+		<p class="notes plain-notes">{{ notebook.plain_note |truncatechars:1040}}</p>
         {% else %}
 		<p class="emptyContent">The note is currently empty, would you like to add conttent</p>
-<<<<<<< HEAD
 		
 		{% endif %} 
 		<a href="{% url 'Notes:delete' notebook.id %}" class="btn"> Delete Note</a>
-		<a href="{% url 'Notes:update' notebook.id %}" class="btn"> update Note</a>
-=======
-
-		
-		    {% endif %} 
-		<a href="{% url 'Notes:delete' notebook.id %}" class="btn"> Delete Note</a>
->>>>>>> 42e8d32d949e7cb54ac3f85d8b691c39c46f0da0
+		<a href="{% url 'Notes:update' notebook.id %}" class="btn"> Update Note</a>
 {% endblock mynotes %}	
 
