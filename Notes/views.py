@@ -23,9 +23,10 @@ class DetailView(generic.DetailView):
     template_name = 'Notes/detail.html'
 
 
-# def create_note(request):
-#     title = request.POST['title']
-#     plain_note = request.POST['content']
-#    # note = Note(title=title, content=content, doc=timezone.now())
-#     #note.save()
-#     return HttpResponseRedirect(reverse('note_keeper:index'))
+class DeleteNote(generic.DeleteView):
+    model = NoteBook
+    success_url ="/"
+
+class UpdateNote(generic.UpdateView):
+    model = NoteBook
+    success_url ="/"

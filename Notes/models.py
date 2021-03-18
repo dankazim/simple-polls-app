@@ -6,4 +6,4 @@ class NoteBook(models.Model):
     plain_note = models.TextField(blank=True)
     
     def __str__ (self):
-        return "{}.{} ".format(self.id,self.title)
+        return "{}".format(self.title)
