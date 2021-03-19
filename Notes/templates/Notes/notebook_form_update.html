@@ -1,7 +1,7 @@
 {% extends "Notes/page_structure.html" %}
 
 {% block heading %} 
-    Updating {{notebook.title}}
+<a href={% url 'Notes:index' %} class="go-back">&#60 Cancel</a> Updating {{notebook.title}}
 {% endblock %}
 
 {% block date %} 

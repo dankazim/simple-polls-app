@@ -1,7 +1,7 @@
 {% extends "Notes/page_structure.html" %}
 
 {% block heading %} 
-	Delete Confirmation!
+<a href={% url 'Notes:index' %} class="go-back">&#60 Cancel</a>Delete Confirmation!
 {% endblock %}
 
 {% block date %} 
@@ -13,6 +13,7 @@
         {% csrf_token %}
         <p>Are you sure you want to delete "{{ object }}"?</p>
         <input type="submit" value="Confirm">
+        <input type="cancel" value="Cancel">
     </form>
 
 {% endblock mynotes %}
