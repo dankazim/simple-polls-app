@@ -5,6 +5,8 @@
 {% block heading %} 
 	
 	<a href={% url 'Notes:index' %} class="go-back">&#60 back</a> {{ notebook.title }} 
+
+	
 {% endblock %}
 
 {% block date %} 
@@ -12,13 +14,19 @@
 {% endblock %}  
 
 {% block mynotes %}
+{% load static %} 
 	{% if notebook %}
+	<div class="icons-update-delete">
+	<a class="delete-update-btn" href="{% url 'Notes:update' notebook.id %}"><img class="icon-images" src="{% static 'Notes/images/edit.svg' %}"> Edit</a>
+	<a class="delete-update-btn" href="{% url 'Notes:delete' notebook.id %}"><img class="icon-images" src="{% static 'Notes/images/delete.svg' %}"> Delete</a> 
+</div>
+	
+
 		<p class="notes plain-notes">{{ notebook.plain_note |truncatechars:1040}}</p>
         {% else %}
 		<p class="emptyContent">The note is currently empty, would you like to add conttent</p>
 		
 		{% endif %} 
-		<a href="{% url 'Notes:delete' notebook.id %}" class="btn"> Delete Note</a>
-		<a href="{% url 'Notes:update' notebook.id %}" class="btn"> Update Note</a>
+		
 {% endblock mynotes %}	
 

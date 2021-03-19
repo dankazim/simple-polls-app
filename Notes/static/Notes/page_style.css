@@ -96,7 +96,9 @@ li{
   padding-bottom: 7px;
 }
 
+
 li a{
+  color: black;
   text-decoration:none;
 }
 li a:hover{
@@ -112,8 +114,18 @@ float: right;
   font-size: 14px;
   line-height: 1.5;
 /*   padding-bottom: 7px; */
-
 }
 
+.icon-images{
+  width: 14px; 
+  height: 14px;
+}
 
+.delete-update-btn{
+  text-decoration: none;
+  padding-right: 10%;
+}
+.icons-update-delete{
+  padding: 0% 25% 0% 33%;
+}
 
