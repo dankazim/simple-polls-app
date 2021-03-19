@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block date %} 
-	{{ notebook.pub_date |date:"M d, Y"}}
+	{{ notebook.pub_date |date:"M d, Y H:i"}}
 {% endblock %}  
 
 {% block mynotes %}
@@ -20,8 +20,6 @@
 	<a class="delete-update-btn" href="{% url 'Notes:update' notebook.id %}"><img class="icon-images" src="{% static 'Notes/images/edit.svg' %}"> Edit</a>
 	<a class="delete-update-btn" href="{% url 'Notes:delete' notebook.id %}"><img class="icon-images" src="{% static 'Notes/images/delete.svg' %}"> Delete</a> 
 </div>
-	
-
 		<p class="notes plain-notes">{{ notebook.plain_note |truncatechars:1040}}</p>
         {% else %}
 		<p class="emptyContent">The note is currently empty, would you like to add conttent</p>

@@ -129,3 +129,6 @@ float: right;
   padding: 0% 25% 0% 33%;
 }
 
+p .updated-label{
+  font-size: 15px;
+}
